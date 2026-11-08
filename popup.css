@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 300px;
+  background: #0d1117;
+  color: #e6edf3;
+  font-family: "Segoe UI", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+  font-size: 13px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(135deg, #131c2b, #0d1117 70%);
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  flex: none;
+}
+
+h1 {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+main {
+  padding: 12px;
+}
+
+.setting-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.setting-head label {
+  color: #d7e0eb;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.setting-head output {
+  color: #6fb6ff;
+  font: 600 12px/1 "Segoe UI", "Microsoft YaHei", sans-serif;
+}
+
+.setting-row {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.setting-row input[type="range"] {
+  flex: 1;
+  min-width: 0;
+  height: 18px;
+  accent-color: #58a6ff;
+}
+
+.setting-row input[type="number"] {
+  width: 58px;
+  height: 26px;
+  padding: 0 6px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 6px;
+  outline: none;
+  background: #0d1420;
+  color: #e6edf3;
+  font: 600 12px/1 "Segoe UI", "Microsoft YaHei", sans-serif;
+  text-align: center;
+}
+
+.setting-row input[type="number"]:focus {
+  border-color: #58a6ff;
+  box-shadow: 0 0 0 2px rgba(88, 166, 255, 0.18);
+}
+
+.setting-row .unit {
+  color: #7f8b9b;
+  font-size: 11px;
+}
+
+.setting-row button {
+  height: 26px;
+  padding: 0 10px;
+  border: 1px solid rgba(88, 166, 255, 0.4);
+  border-radius: 6px;
+  background: rgba(88, 166, 255, 0.14);
+  color: #8ec7ff;
+  font: 600 12px/1 "Segoe UI", "Microsoft YaHei", sans-serif;
+  cursor: pointer;
+}
+
+.setting-row button:hover {
+  background: rgba(88, 166, 255, 0.24);
+}
+
+.setting-row button:active {
+  transform: translateY(1px);
+}
+
+.setting-hint {
+  margin: 7px 0 0;
+  color: #7f8b9b;
+  font-size: 10px;
+}
+
+.setting-hint:empty {
+  display: none;
+}
+
+.setting-hint.ok {
+  color: #5fd39b;
+}

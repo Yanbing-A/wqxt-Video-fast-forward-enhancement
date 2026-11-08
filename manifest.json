@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "问渠播放增强",
+  "version": "1.6.0",
+  "description": "问渠学堂回放：方向键快进/快退、长按倍速，触发时间可自定义。",
+  "permissions": ["storage"],
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "问渠播放增强",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://classroom.wqxt.cdut.edu.cn/*",
+        "https://*.wqxt.cdut.edu.cn/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ]
+}

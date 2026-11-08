@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>问渠播放增强</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="header">
+    <img class="logo" src="icons/icon48.png" alt="">
+    <h1>问渠播放增强</h1>
+  </header>
+
+  <main>
+    <div class="setting-head">
+      <label for="hold-delay">长按触发时间</label>
+      <output id="hold-delay-value" for="hold-delay">100ms</output>
+    </div>
+    <div class="setting-row">
+      <input id="hold-delay" type="range" min="10" max="500" step="10" value="100">
+      <input id="hold-delay-number" type="number" min="10" max="500" step="10" value="100" aria-label="长按触发时间（毫秒）">
+      <span class="unit">ms</span>
+      <button id="save-hold-delay" type="button">保存</button>
+    </div>
+    <p id="hold-delay-status" class="setting-hint" aria-live="polite"></p>
+  </main>
+
+  <script src="popup.js"></script>
+</body>
+</html>
